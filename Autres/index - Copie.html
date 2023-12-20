@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            background-image: url(images/fond\ figma.png);
+            background-position: top;
+            background-size: 100%;
+            width: 100%;
+            height: 1500px;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+
+        /*animation et règle de l'avion*/
+        .avion{
+            width: 0;
+            height: 0;
+            position: absolute;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-name: avion;
+            animation-delay: 1s;
+        }
+        @keyframes avion{
+            from{
+                width: 35px;
+                height: auto;
+                top: 52%;
+                left: 15.3%;
+                transform: rotate(100deg);
+            }
+
+            5%{
+                top: 71%;
+                left: 46%;
+                transform: rotate(120deg);
+            }
+            7%{
+                top: 71%;
+                left: 46%;
+                transform: rotate(90deg);
+            }
+
+            12%{
+                top: 80%;
+                left: 74.7%;
+                transform: rotate(100deg);
+            }
+            14%{
+                transform: rotate(230deg);
+                top: 80%;
+                left: 74.7%;
+            }
+
+            19%{
+                top: 121%;
+                left: 56%;
+                transform: rotate(210deg);
+            }
+            21%{
+                transform: rotate(120deg);
+                top: 121%;
+                left: 56%;
+            }
+
+            26%{
+                top: 148%;
+                left: 77.5%;
+                transform: rotate(130deg);
+            }
+            28%{
+                transform: rotate(230deg);
+                top: 148%;
+                left: 77.5%;
+            }
+
+            33%{
+                top: 180%;
+                left: 60.5%;
+                transform: rotate(220deg);
+            }
+            35%{
+                transform: rotate(290deg);
+                top: 180%;
+                left: 60.5%;
+            }
+
+            40%{
+                top: 156%;
+                left: 27%;
+                transform: rotate(300deg);
+            }
+            42%{
+                transform: rotate(180deg);
+                top: 156%;
+                left: 27%;
+            }
+
+            47%{
+                top: 202%;
+                left: 31.5%;
+                transform: rotate(170deg);
+            }
+            49%{
+                transform: rotate(95deg);
+                top: 202%;
+                left: 31.5%;
+            }
+
+            57%{
+                top: 218%;
+                left: 74.5%;
+                transform: rotate(105deg);
+                width: 35px;
+                height: auto;
+            }
+            57.1%{
+                top: 218%;
+                left: 74.5%;
+                width: 0;
+                height: 0;
+            }
+            to{
+                top: 218%;
+                left: 74.5%;
+            }
+        }
+
+        /* Règles général des boutons */
+        .boutons button{
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background-color: rebeccapurple;
+            text-align: center;
+            color: aliceblue;
+        }
+        .boutons button:hover{
+            width: 80px;
+            height: 80px;
+            transition: 0.5s;
+        }
+        .boutons button:not(:focus) span{
+            display: none;
+        }
+        .boutons button:not(:hover){
+            transition: 0.5s;
+        }
+        .boutons button:focus{
+            width: 80px;
+            height: 80px;
+            transition: 0.5s;
+            background-color: red;
+        }
+        .boutons button:focus span{
+            width: 300px;
+            height: 200px;
+            background-color: #4b9ddb77;
+            border-radius: 10px;
+            border: solid 2px beige;
+            position: absolute;
+            top: -60px;
+            left: -120px;
+        }
+
+        /* Boutons par boutons */
+        .point1{
+            top: 50%;
+            left: 14.3%;
+        }
+        .point1:hover, .point1:focus{
+            top: 48%;
+        }
+        .point2{
+            top: 69%;
+            left: 45%;
+        }
+        .point2:hover, .point2:focus{
+            top: 67%;
+        }
+        .point3{
+            top: 78%;
+            left: 73.7%;
+        }
+        .point3:hover, .point3:focus{
+            top: 76%;
+            left: 73.7%;
+        }
+        .point4{
+            top: 119%;
+            left: 55%;
+        }
+        .point4:hover, .point4:focus{
+            top: 117%;
+        }
+        .point5{
+            top: 146%;
+            left: 76.5%;
+        }
+        .point5:hover, .point5:focus{
+            top: 144%;
+        }
+        .point6{
+            top: 178%;
+            left: 59.5%;
+        }
+        .point6:hover, .point6:focus{
+            top: 176%;
+        }
+        .point7{
+            top: 154%;
+            left: 26%;
+        }
+        .point7:hover, .point7:focus{
+            top: 152%;
+        }
+        .point8{
+            top: 200%;
+            left: 30.5%;
+        }
+        .point8:hover, .point8:focus{
+            top: 198%;
+        }
+        .point9{
+            top: 216%;
+            left: 73.5%;
+        }
+        .point9:hover, .point9:focus{
+            top: 214%;
+        }
+        
+    </style>
+</head>
+<body>
+    <img class="avion" src="images/avion.png" alt="">
+
+<span class="boutons">
+    <button type="button" class="point1">
+        <div>ici</div>
+        <span>
+            <h3>
+                Cambodge : 22 juin au 18 juillet 2022
+            </h3>
+            <p>
+                Dylan repart à l'aventure !
+            </p>
+        </span>
+    </button>
+    <button type="button" class="point2">
+        <div>ici</div>
+        <span>
+            <h3>
+                Australie :19 juillet au 24 août 2022
+            </h3>
+            <p>
+                Dylan a troué son sac !
+            </p>
+        </span>
+    </button>
+    <button type="button" class="point3">
+        <div>ici</div>
+        <span>
+            <h3>
+                Madagascar : 25 août au 17 septembre 2022
+            </h3>
+            <p>
+                Dylan se fait dépouiller !
+            </p>
+        </span>
+    </button>
+    <button type="button" class="point4">
+        <div>ici</div>
+        <span>
+            <h3>
+                Congo : 17 septembre au 18 octobre 2022
+            </h3>
+            <p>
+                Dylan fait une chute de 5 étages !
+            </p>
+        </span>
+    </button>
+    <button type="button" class="point5">
+        <div>ici</div>
+        <span>
+            <h3>
+                Côte d’Ivoire : 18 octobre au 15 novembre 2022
+            </h3>
+            <p>
+                Dylan perd contact avec la civilisation !
+            </p>
+        </span>
+    </button>
+    <button type="button" class="point6">
+        <div>ici</div>
+        <span>
+            <h3>
+                Haïti : 27 novembre au 24 décembre 2022
+            </h3>
+            <p>
+                Dylan passe sous l'élice d'un bateau !
+            </p>
+        </span>
+    </button>
+    <button type="button" class="point7">
+        <div>ici</div>
+        <span>
+            <h3>
+                Mexique : 2 janvier au 5 février 2023
+            </h3>
+            <p>
+                Dylan fait une infection alimentaire !
+            </p>
+        </span>
+    </button>
+    <button type="button" class="point8">
+        <div>ici</div>
+        <span>
+            <h3>
+                Costa rica : 5 février au 2 mars 2023
+            </h3>
+            <p>
+                Dylan rejoint un gang !
+            </p>
+        </span>
+    </button>
+    <button type="button" class="point9">
+        <div>ici</div>
+        <span>
+            <h3>
+                Pérou : 2 mars au 30 mars 2023
+            </h3>
+            <p>
+                Dylan perd l'usage de tous ses membres !
+            </p>
+        </span>
+    </button>
+</span>
+
+</body>
+</html>
+
+

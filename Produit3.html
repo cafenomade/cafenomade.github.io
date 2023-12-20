@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style_produits.css">
+    <title>Salima Kadi</title>
+</head>
+
+<body>
+
+    <header>
+<nav id="menu"> 
+    <ul>
+        <li><div class="box"><a href="accueil.html">Accueil</a></div></li>
+        <li><div class="box"><a href="quisuisje.html">Mon voyage</a></div></li>
+        <li><a href="accueil.html"><img class="logo" src="images/logo.png"></a></li>
+        <li><div class="box"><a href="nosproduits.html">Les produits</a></div></li>
+        <li><div class="box"><a href="contact.html">Contact</a></div></li>
+        <li><a class="panier" href="panier.html"><img src="images/panier.png"></a></li>
+    </ul>
+</nav>            
+    </header>
+
+    <main>
+
+    <section class="bandeau">
+        <h1>Faites votre choix</h1>
+        <button type="button"><a href="contact.html"> Nous contacter</a><i class="fa-solid fa-phone"></i></button>
+    </section>
+
+    <section class="main">
+        <div class="fiche_produit">
+            <div class="slider-container">
+                <div class="menu">
+                    <label for="slide-dot-1"></label>
+                    <label for="slide-dot-2"></label>
+                    <label for="slide-dot-3"></label>
+                </div>
+                <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+                <img class="slide-img" src="images/SVG/salima1.svg">
+                <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+                <img class="slide-img" src="images/SVG/etiquette_cote-ivoire.svg">
+                <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+                <img class="slide-img" src="images/SVG/cafe.svg">
+            </div>
+            <div class="informations_produits">
+                <h2>Salima Kadi</h2>
+                <p>Le robusta de Salima et Kadi, deux sœurs cultivatrices, hérite du savoir-faire traditionnel de la région. 4ème plus gros exportateur de café d'Afrique, la Côte d’Ivoire profite d’un environnement optimal pour ce café au grain au goût fort et corsé avec une haute teneur en caféine, de quoi aiguiller vos matinées.</p>
+                <select name="liste_deroulante">
+                    <option value=""> Type de café</option>
+                    <option value="grain">Café grains</option>
+                    <option value="moulu">Café moulu</option>
+                </select>
+            </div>
+            <div class="choix_produits">
+                <p class="prix">9,99€</p>
+                <p class="prix_kg">36€00/kg</p>
+                <p class="etat">En stock</p>
+                <div class="selection_quantité">
+                    <label for="nb_cafe">Quantité :</label>
+                    <select name="quantité">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <div class="add">
+                    <button type="button" class="ajouter_panier">Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+                </div> 
+                <div class="look">
+                    <button type="button" class="voir_panier"><a href="panier.html">Voir mon panier</a></button>
+                </div>
+            </div>
+        </div>
+        <section class="avis">
+            <div class="avis_header">
+               <span>Commentaires (110)</span> 
+            </div>
+            <div class="avis_body">
+                <!----box1----------->
+                <div class="avis_box">
+                    <div class="haut_box">
+                        <div class="profil">
+                            <div class="profil-img">
+                                <img src="images/temoignage/9.jpg" alt="client"/>
+                            </div>
+                            <div class="nom_client">
+                                <p>Adeline_lerouxel</p>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="commentaire">
+                        <p>" Ce café a un goût corsé et puissant. Sa qualité est satisfaisante, mais il ne rivalise pas avec les arômes subtils d'un café arabica."</p>
+                    </div>
+                </div>
+                <!----box2----------->
+                <div class="avis_box">
+                    <div class="haut_box">
+                        <div class="profil">
+                            <div class="profil-img">
+                                <img src="images/temoignage/10.jpg" alt="client"/>
+                            </div>
+                            <div class="nom_client">
+                                <p>Cafe_pro</p>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="commentaire">
+                        <p>" Une véritable pépite pour les amateurs de café fort et plein de personnalité !" </p>
+                    </div>
+                </div>
+                 <!----box3----------->
+                 <div class="avis_box">
+                    <div class="haut_box">
+                        <div class="profil">
+                            <div class="profil-img">
+                                <img src="images/temoignage/11.jpg" alt="client"/>
+                            </div>
+                            <div class="nom_client">
+                                <p>LéaRenaud</p>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="commentaire">
+                        <p>" Un café qui fait du bien, tout en préservant notre environnement. C'est mon nouvel allié pour bien commencer ma journée !" </p>
+                    </div>
+                </div>
+                 <!----box4----------->
+                 <div class="avis_box">
+                    <div class="haut_box">
+                        <div class="profil">
+                            <div class="profil-img">
+                                <img src="images/temoignage/12.jpg" alt="client"/>
+                            </div>
+                            <div class="nom_client">
+                                <p>Antoine.G</p>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="commentaire">
+                        <p>" Café Nomade : un plaisir éco-responsable. Savourez l'excellence avec un impact positif." </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="autres">
+            <div class="autres_produits-header">
+            <h2>Vous apprécierez également</h2>
+            </div>
+            <div class="autres_produits">
+                <div class="card">
+                    <img src="images/PNG/poncho1.png" alt="">
+                    <div class="separation"></div>
+                    <div class="card-header">
+                        <h2 class="title">Poncho</h2>
+                        <h2 class="price">9.99€</h2>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Produit2.html"><i class="fa-solid fa-square-plus"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/PNG/kanya.png" alt="">
+                    <div class="separation"></div>
+                    <div class="card-header">
+                        <h2 class="title">Kanya Neong</h2>
+                        <h2 class="price">9.99€</h2>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Produit1.html"><i class="fa-solid fa-square-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+</main>
+
+    <footer>
+
+        <span class="contactinfo">
+        <p>contact@cafenomade.com</p>
+        <p>00 00 00 00 00 </p>
+        <p>8 Rue René Descartes 86000 Poitiers</p>
+        </span>
+        
+        <nav id="footer">
+        <ul>
+        <li><a href="#mentions">Mentions légales</li>
+        <li><a href="#politique">Politique de confidentialité</li>
+        <li><a href="#cookies">Cookies</li>
+        </ul>
+        </nav>
+        
+    </footer>
+</body>
+</html>

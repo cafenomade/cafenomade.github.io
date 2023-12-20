@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Playpen+Sans:wght@300&family=Roboto:wght@300;400&display=swap');
+
+html{
+    height: 100%; /*notre body correspond à notre écran*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 70px 1fr 80px;
+    grid-column-gap: 10px;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    background-position: top;
+    background-size: 100%;
+    width: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    font-family: 'Playpen Sans', cursive;
+    font-family: 'Calligraffitti', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight:200;
+    background-color: #F2E6D4;
+}
+
+/*La partie qui corresponds à mon header*/
+header{
+    background-color: #F4E2B3; /*Couleur beige*/
+    position: fixed; /*on le fixe, pour pas qu'il bouge*/
+    right: 0;
+    top: 5%;
+    width: 100%;
+    margin-top: -2.5em;
+    grid-area: header;
+    height: 73px;
+    z-index: 12;
+}
+
+/*On vise l'image du logo*/
+.logo{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin: 50px auto auto auto;
+    margin: 50px 50px auto 50px;
+    transition: box-shadow 0.3s ease;
+    border-radius: 100%;
+}
+
+.panier{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin: auto auto auto 50px;
+    background-color: #F4E2B3;
+    margin-left: 0;
+    transition: box-shadow 0.3s ease;
+    border-radius: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 0px;
+}
+
+main{
+    position: relative;
+    grid-area: main;
+    z-index: 1;
+    background-color: #E2D1BA;
+    min-height: 100vh;
+    margin-top: -10px;
+}
+
+#menu div {
+    border: 2px solid transparent;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#menu{
+    position: relative;
+    text-align: center;
+}
+
+#menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    align-content: center;
+    align-items: center;
+    height: 73px;
+    margin: 0;
+}
+
+#menu li {
+    display: inline-block;
+}
+
+#menu a{
+    text-decoration: none;
+    margin: 0 50px;
+    color: #333333;
+    border: 2px solid transparent;
+}
+
+.box{
+    transition: box-shadow 0.3s ease;
+    padding: 25px 0;    
+}
+
+/*Création de l'effet sur les boutons menus quand on clique dessus*/
+.panier:hover{
+    border: 2px solid white;
+    background-color: beige;
+    border-radius: 100%;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+}
+
+.box:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    background-color: beige;
+}
+
+.bandeau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/fond-marron.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3em 5em 2em 5em;
+}
+    
+.bandeau h1 { 
+    margin: 0;
+    color: whitesmoke;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: 'Playpen Sans', cursive;
+}
+    
+.bandeau button {
+    padding: 15px 20px;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    color: white;
+    background-color: #be1522;
+    }
+    
+.bandeau button i {
+    padding: 2px 2px 2px 10px;
+    color:white;
+}
+    
+.bandeau button:hover {
+    transform: scale(1.05);
+}
+
+.bandeau a {
+    text-decoration: none;
+    color:white;
+}
+
+.main {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin: 8em 4em;
+}
+
+.fiche_produit {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.slider-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    overflow: hidden;
+    width: 100%;
+}
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgb(179, 118, 47, 41%);
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+}
+.menu label:hover,.menu label:focus {
+    background: #be1522;
+}
+
+.slide-input{
+    opacity: 0;
+}
+
+.slide-img {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s 0.75s;
+}
+
+[id^="slide"]:checked + .slide-img {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
+
+.informations_produits {
+    max-width: 500px;
+}
+
+.informations_produits p {
+    line-height: 30px;
+}
+
+h2 {
+    font-size:32px;
+    font-family: 'Calligraffitti', cursive;
+    font-family: 'Playpen Sans', cursive;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+select {
+    cursor: pointer;
+    background-color: rgb(179, 118, 47, 41%);
+    border: none;
+    padding: 10px 5px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.choix_produits {
+    background-color: rgb(179, 118, 47, 41%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.choix_produits .prix {
+    font-size: 27px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.choix_produits .prix_kg {
+    margin: 1px;
+    font-size: 14px;
+}
+
+.choix_produits .etat {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.choix_produits label {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.selection_quantité select {
+    background-color: beige;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.ajouter_panier {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    color: white;
+    background-color: #be1522;
+    margin-top: 10px;
+}
+
+.ajouter_panier:hover {
+    transform: scale(1.05);
+}
+
+.ajouter_panier i {
+    padding: 2px 2px 2px 10px;
+    color:white;
+}
+
+.voir_panier {
+    padding: 10px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    color: white;
+    background-color: rgb(179, 118, 47);
+    margin-top: 10px;
+}
+
+.voir_panier:hover {
+    transform: scale(1.05);
+}
+
+.voir_panier a {
+    text-decoration: none;
+    color: white;
+}
+
+.avis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4em;
+}
+
+.avis .avis_header {
+    letter-spacing: 1px;
+    margin: 30px 0px;
+}
+
+.avis .avis_body {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap:wrap;
+    width: 100%;
+}
+
+.avis .avis_body .avis_box {
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color:#F9F6EF;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.avis .avis-body .avis_box:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+.profil-img {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profil-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.profil {
+    display: flex;
+    align-items: center;
+
+}
+
+.note {
+    color: #f9d71c;
+}
+
+.haut_box {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.autres {
+    margin-top: 4em;
+}
+
+.autres_produits-header h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+
+.main .autres .autres_produits .card .separation {
+    width: 100%;
+    height: 1px;
+    background-color: #b3752fa8;
+}
+
+.autres_produits {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.autres_produits .card {
+    margin: 0px 25px 25px 0px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #F2E6D4;
+    overflow: hidden;
+}
+
+.autres_produits .card img {
+    width: 200px;
+    padding: 20px;
+}
+
+.autres_produits .card:hover {
+    transform: scale(1,1);
+}
+
+
+.autres_produits .card .card-header .title {
+    max-width: 230px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.autres_produits .card .card-header .price {
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.autres_produits .card .card-footer i {
+    color : #be1522;
+    cursor: pointer;
+    font-size:30px;
+    transition: transform 0.5s;
+    float: right;
+}
+
+.autres_produits .card .card-footer i:hover {
+    transform: scale(1.05);
+    color:#861c09;
+}
+
+/*Code qui vise la barre du bas*/
+/*Il faut que j'essaie de la coller tout en bas de ma page, elle reste au milieu la*/
+#footer li {
+    display: block;
+    float: right;
+}
+
+#footer a{
+    text-decoration: none;
+    margin: 0 50px; 
+    color: whitesmoke;
+}
+
+#footer ul{
+    text-align: right;
+}
+
+.contactinfo{
+    display: block;
+    position: relative; 
+    float: left;
+    bottom: 7%;
+    left: 5%;
+}
+
+.contactinfo p{
+    margin: 7px auto;
+}
+
+footer{
+    display: inline-block;
+    background-color: #333333; /*Couleur dans les tons noir*/
+    color: whitesmoke;
+    /* width: 100%;
+    height: 20%;
+    right: 0; */
+    position: relative;
+    bottom: 0; /*on le colle en bas*/
+    height: 95px; /*On donne une taille fixe à notre footer*/
+    grid-area: footer;
+    z-index: 2;
+}
+
+.fiche_produit{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    grid-template-areas: "menu info choix";
+    gap: 20px;
+}
+.informations_produits{
+    grid-area: info;
+}
+.choix_produits{
+    grid-area: choix;
+    height: 260px;
+}
+.menu{
+    grid-area: menu;
+}

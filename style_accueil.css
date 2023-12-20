@@ -1,0 +1,293 @@
+/*On importe la police*/
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&display=swap');
+
+html{
+	height: 100%; /*notre body correspond à notre écran*/
+}
+
+/*Faire une grille pour aider a la disposition des éléments de page*/
+body{
+	display: grid;
+  	grid-template-columns: 10% auto 10%;
+	grid-template-rows: 70px 1fr 80px;
+	grid-column-gap: 10px;
+	height: 100vh;
+	margin: 0;
+	grid-template-areas: 
+	"header header header"
+	"main main main"
+	"footer footer footer";
+	font-family: 'Playpen Sans', cursive;
+}
+
+/*Création de la barre de navigation*/
+header{
+	background-color: #F4E2B3; /*Couleur beige*/
+	position: fixed; /*on le fixe, pour pas qu'il bouge*/
+	right: 0;
+	top: 5%;
+	width: 100%;
+	margin-top: -2.5em;
+	grid-area: header;
+	height: 73px;
+	z-index: 2;
+}
+
+/*On vise l'image du logo*/
+.logo{
+	width: 80px;
+	height: 80px;
+	display: flex;
+	margin: 50px auto auto auto;
+	margin: 50px 50px auto 50px;
+    transition: box-shadow 0.3s ease;
+    border-radius: 100%;
+}
+
+/*On vise le bouton panier dans le menu*/
+.panier{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin: auto auto auto 50px;
+    background-color: #F4E2B3;
+    margin-left: 0;
+    transition: box-shadow 0.3s ease;
+    border-radius: 100%;
+}
+
+main{
+	position: relative;
+	grid-area: main;
+	background-image: url(images/fond-marron.png);
+	background-size: cover;
+	opacity: 90%;
+	z-index: 1;
+}
+
+.menu div {
+    border: 2px solid transparent;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.menu{
+	position: relative;
+	text-align: center;
+}
+
+.menu ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0;
+	align-content: center;
+	align-items: center;
+	height: 73px;
+	margin: 0;
+}
+
+.menu li {
+	display: inline-block;
+}
+
+.menu a{
+	text-decoration: none;
+	margin: 0 50px;
+	color: #333333;
+	border: 2px solid transparent;
+}
+
+.box{
+    transition: box-shadow 0.3s ease;
+    padding: 25px 0;	
+}
+
+.panier{
+    padding: 15px;
+    position: absolute;
+    top: 0px;
+}
+
+.panier:hover{
+    border: 2px solid white;
+    background-color: beige;
+    border-radius: 100%;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+}
+
+.box:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    background-color: beige;
+}
+
+h1{
+	color: #ffffff;
+	margin: 5% 0 0 10%;
+	font-size: 32pt;
+}
+
+.slogan{
+	position: absolute;
+	width: 50%;
+	margin-left: 5%;
+}
+.slogan p{
+	margin-left: 10%;
+	color: #ffffff;
+}
+
+.slogan a{
+	color: whitesmoke;
+	margin-left: 10%;
+	font-size: 20px;
+	background-color: #be1522; /*Couleur rouge du logo*/
+	padding: 7px 15px;
+	border-radius: 10px;
+}
+
+.produit1{
+	background-color: #F4E2B3;
+	height: 350px;
+	width: 200px;
+	float: right;
+	margin-right: 10%;
+	padding-left: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 11px 10px #333333; /*Mettre une ombre sur la boite entière*/
+}
+
+.produit2{
+	background-color: #F4E2B3;
+	height: 350px;
+	width: 200px;
+	float: right;
+	margin-right: 4%;
+	padding-left: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 11px 10px #333333;
+}
+
+.produit3{
+	background-color: #F4E2B3;
+	height: 350px;
+	width: 200px;
+	float: right;
+	margin-right: 4%;
+	padding-left: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 11px 10px #333333;
+}
+
+.produit1 img{
+	width: 100%;
+	height: 57%;
+	margin: -7px auto -15px -10px;
+}
+
+.produit1 .texte{
+	line-height: 20px;
+}
+
+.produit2 img{
+	width: 100%;
+	height: 57%;
+	margin: -7px auto -15px -10px;
+}
+
+.produit2 .texte{
+	line-height: 20px;
+}
+
+.produit3 img {
+	width: 100%;
+	height: 57%;
+	margin: -7px auto -15px -10px;
+}
+
+.produit3 .texte{
+	line-height: 20px;
+}
+
+.produits p{
+	text-align: justify;
+	margin: auto 25px 0 0;
+}
+
+.produits a{
+	color: whitesmoke;
+	text-decoration: none;
+	font-family: 'Playpen Sans', cursive;
+}
+
+.produits button{
+	cursor: pointer;
+	transition: transform 0.5s;
+	background-color: #be1522;
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-align: center;
+	margin: 15px 10% auto 28%;
+	margin-right: 10%;
+	border: none;
+}
+
+.produits button:hover{
+	transform: scale(1.05);
+	background-color: #861c09;
+}
+
+section .bandeau{
+	height: 150px;
+	background-image: url(images/fond-marron.png);
+	width: 100%;
+}
+
+#footer li {
+	display: block;
+	float: right;
+}
+
+#footer a{
+	text-decoration: none;
+	margin: 0 50px;	
+	color: whitesmoke;
+}
+
+#footer ul{
+	text-align: right;
+}
+
+.contactinfo{
+	display: block;
+	position: relative;	
+	float: left;
+	bottom: 7%;
+	left: 5%;
+}
+
+.contactinfo p{
+	margin: 5px auto;
+	font-size: 15px;
+}
+
+footer{
+	display: inline-block;
+	background-color: #333333; /*Couleur dans les tons noir*/
+	color: whitesmoke;
+	width: 100%;
+	position: fixed;
+	right: 0;
+	bottom: 0; /*on le colle en bas*/
+	height: 80px; /*On donne une taille fixe à notre footer*/
+	grid-area: footer;
+	z-index: 2;
+}
